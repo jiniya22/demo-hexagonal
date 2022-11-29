@@ -3,7 +3,6 @@ package me.jiniworld.demohx.persistence.notice
 import me.jiniworld.demohx.annotation.PersistenceAdapter
 import me.jiniworld.demohx.application.notice.domain.Notice
 import me.jiniworld.demohx.application.notice.port.output.LoadNoticePort
-import me.jiniworld.demohx.persistence.notice.repository.NoticeRepository
 import org.springframework.data.domain.Pageable
 import org.springframework.data.repository.findByIdOrNull
 

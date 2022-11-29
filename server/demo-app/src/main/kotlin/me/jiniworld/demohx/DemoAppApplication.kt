@@ -7,7 +7,8 @@ import java.util.*
 @SpringBootApplication(scanBasePackages = [
     "me.jiniworld.demohx.config",
     "me.jiniworld.demohx.web",
-    "me.jiniworld.demohx.application"
+    "me.jiniworld.demohx.application",
+    "me.jiniworld.demohx.persistence"
 ])
 class DemoAppApplication
 

@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.persistence.notice.entity
+package me.jiniworld.demohx.persistence.notice
 
 import me.jiniworld.demohx.application.notice.domain.Notice
 import org.springframework.data.annotation.CreatedDate
