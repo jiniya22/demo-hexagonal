@@ -8,7 +8,7 @@ import java.util.*
     "me.jiniworld.demohx.config",
     "me.jiniworld.demohx.web",
     "me.jiniworld.demohx.application",
-    "me.jiniworld.demohx.persistence"
+    "me.jiniworld.demohx.persistence",
 ])
 class DemoAppApplication
 
