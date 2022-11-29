@@ -1,6 +1,6 @@
 spring:
   application:
-    name: chaeking
+    name: demo-app
   profiles:
     active: local
   config:
@@ -31,8 +31,8 @@ spring:
     open-in-view: false
     show-sql: true
 
-  devtools:
-    add-properties: false
+#  devtools:
+#    add-properties: false
 
 server:
   port: 8080
