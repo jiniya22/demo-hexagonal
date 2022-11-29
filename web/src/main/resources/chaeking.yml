@@ -1,0 +1,7 @@
+chaeking:
+  version: 1.0.1
+  url: http://localhost:${server.port}
+
+book-search:
+  kakao:
+    api-url: https://dapi.kakao.com
