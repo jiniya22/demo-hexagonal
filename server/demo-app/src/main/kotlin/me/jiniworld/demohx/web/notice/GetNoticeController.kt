@@ -3,10 +3,7 @@ package me.jiniworld.demohx.web.notice
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
 import me.jiniworld.demohx.application.notice.port.input.GetNoticeQuery
-import me.jiniworld.demohx.application.notice.domain.Notice
-import me.jiniworld.demohx.application.notice.port.output.NoticeSimple
-import org.springframework.data.domain.PageRequest
-import org.springframework.data.domain.Sort
+import me.jiniworld.demohx.application.notice.port.input.GetNoticesCommand
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.*
 
@@ -24,7 +21,7 @@ internal class GetNoticeController(
     fun notices(
         @RequestParam(value = "page", required = false, defaultValue = "0") page: Int,
         @RequestParam(value = "size", required = false, defaultValue = "10") size: Int,
-    ) = getNoticeQuery.getNoticeSimple(PageRequest.of(page, size, Sort.by(Sort.Order.desc("id"))))
+    ) = getNoticeQuery.getNoticeSimple(GetNoticesCommand(page = page, size = size))
 
     @Operation(summary = "공지사항 상세조회")
     @GetMapping("/{notice_id}")

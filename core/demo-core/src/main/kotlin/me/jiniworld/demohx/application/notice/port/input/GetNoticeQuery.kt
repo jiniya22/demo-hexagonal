@@ -5,6 +5,6 @@ import me.jiniworld.demohx.application.notice.port.output.NoticeSimple
 import org.springframework.data.domain.Pageable
 
 interface GetNoticeQuery {
-    fun getNoticeSimple(pageable: Pageable): List<NoticeSimple>?
+    fun getNoticeSimple(command: GetNoticesCommand): List<NoticeSimple>?
     fun getNoticeDetail(noticeId: Long): NoticeDetail?
 }
