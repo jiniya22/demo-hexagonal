@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.adapter.output.persistence
+package me.jiniworld.demohx.notice.adapter.output.persistence
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

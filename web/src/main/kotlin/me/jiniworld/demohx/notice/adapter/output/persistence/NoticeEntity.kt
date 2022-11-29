@@ -1,6 +1,6 @@
-package me.jiniworld.demohx.adapter.output.persistence
+package me.jiniworld.demohx.notice.adapter.output.persistence
 
-import me.jiniworld.demohx.domain.Notice
+import me.jiniworld.demohx.notice.domain.Notice
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDateTime

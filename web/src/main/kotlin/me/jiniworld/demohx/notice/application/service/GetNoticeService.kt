@@ -1,8 +1,8 @@
-package me.jiniworld.demohx.application.service
+package me.jiniworld.demohx.notice.application.service
 
-import me.jiniworld.demohx.application.port.input.GetNoticeQuery
-import me.jiniworld.demohx.application.port.output.LoadNoticePort
-import me.jiniworld.demohx.domain.Notice
+import me.jiniworld.demohx.notice.application.port.input.GetNoticeQuery
+import me.jiniworld.demohx.notice.application.port.output.LoadNoticePort
+import me.jiniworld.demohx.notice.domain.Notice
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional

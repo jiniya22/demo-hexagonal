@@ -1,9 +1,9 @@
-package me.jiniworld.demohx.adapter.input.web
+package me.jiniworld.demohx.notice.adapter.input.web
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
-import me.jiniworld.demohx.application.service.GetNoticeService
-import me.jiniworld.demohx.domain.Notice
+import me.jiniworld.demohx.notice.application.service.GetNoticeService
+import me.jiniworld.demohx.notice.domain.Notice
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Component

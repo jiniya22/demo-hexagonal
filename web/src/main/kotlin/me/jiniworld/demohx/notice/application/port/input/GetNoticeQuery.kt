@@ -1,6 +1,6 @@
-package me.jiniworld.demohx.application.port.input
+package me.jiniworld.demohx.notice.application.port.input
 
-import me.jiniworld.demohx.domain.Notice
+import me.jiniworld.demohx.notice.domain.Notice
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Component
 
