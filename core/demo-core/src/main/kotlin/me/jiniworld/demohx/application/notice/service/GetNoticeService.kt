@@ -1,16 +1,16 @@
 package me.jiniworld.demohx.application.notice.service
 
+import me.jiniworld.demohx.annotation.UseCase
 import me.jiniworld.demohx.application.notice.port.input.GetNoticeQuery
 import me.jiniworld.demohx.application.notice.port.input.GetNoticesCommand
 import me.jiniworld.demohx.application.notice.port.output.LoadNoticePort
 import me.jiniworld.demohx.application.notice.port.output.NoticeDetail
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
-import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional
 
 @Transactional(readOnly = true)
-@Component
+@UseCase
 internal class GetNoticeService(
     private val loadNoticePort: LoadNoticePort,
 ) : GetNoticeQuery {

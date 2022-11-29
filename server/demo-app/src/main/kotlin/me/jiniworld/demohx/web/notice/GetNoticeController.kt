@@ -2,13 +2,12 @@ package me.jiniworld.demohx.web.notice
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
+import me.jiniworld.demohx.annotation.WebAdapter
 import me.jiniworld.demohx.application.notice.port.input.GetNoticeQuery
 import me.jiniworld.demohx.application.notice.port.input.GetNoticesCommand
-import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.*
 
-@Component
-//@WebAdapter
+@WebAdapter
 @Tag(name = "setting-system", description = "설정-시스템(공지사항, FAQ, 이용약관, 메타정보 등)")
 @RestController
 @RequestMapping("/v1/notices")

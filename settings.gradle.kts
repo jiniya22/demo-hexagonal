@@ -7,3 +7,5 @@ findProject(":infrastructure:datastore-mariadb")?.name = "datastore-mariadb"
 include("server")
 include("server:demo-app")
 findProject(":server:demo-app")?.name = "demo-app"
+include("util:common-util")
+findProject(":util:common-util")?.name = "common-util"
