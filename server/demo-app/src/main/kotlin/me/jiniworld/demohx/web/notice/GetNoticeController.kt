@@ -5,11 +5,8 @@ import io.swagger.v3.oas.annotations.tags.Tag
 import me.jiniworld.demohx.annotation.WebAdapter
 import me.jiniworld.demohx.application.notice.port.input.GetNoticeQuery
 import me.jiniworld.demohx.application.notice.port.input.GetNoticesCommand
-import me.jiniworld.demohx.model.BaseResponse
 import me.jiniworld.demohx.model.DataResponse
 import me.jiniworld.demohx.model.NotFoundException
-import me.jiniworld.demohx.model.ServerException
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @WebAdapter
