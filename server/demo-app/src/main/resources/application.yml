@@ -5,10 +5,9 @@ spring:
     active: local
   config:
     import:
-      - chaeking.yml
-#      - vault://secret/chaeking-local
+      - demo-app.yml
   datasource:
-    url: jdbc:mariadb://localhost:3306/book
+    url: jdbc:mariadb://localhost:3306/demofx
     driver-class-name: org.mariadb.jdbc.Driver
     username: test
     password: test
@@ -23,7 +22,7 @@ spring:
     database-platform: org.hibernate.dialect.MariaDB103Dialect
     properties:
       hibernate:
-        format_sql: false
+        format_sql: true
         hbm2ddl.auto: update
         implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
         physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
