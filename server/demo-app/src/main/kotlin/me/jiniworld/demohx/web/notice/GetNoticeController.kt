@@ -5,6 +5,11 @@ import io.swagger.v3.oas.annotations.tags.Tag
 import me.jiniworld.demohx.annotation.WebAdapter
 import me.jiniworld.demohx.application.notice.port.input.GetNoticeQuery
 import me.jiniworld.demohx.application.notice.port.input.GetNoticesCommand
+import me.jiniworld.demohx.model.BaseResponse
+import me.jiniworld.demohx.model.DataResponse
+import me.jiniworld.demohx.model.NotFoundException
+import me.jiniworld.demohx.model.ServerException
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @WebAdapter
@@ -21,10 +26,14 @@ internal class GetNoticeController(
         @RequestParam(value = "page", required = false, defaultValue = "0") page: Int,
         @RequestParam(value = "size", required = false, defaultValue = "10") size: Int,
     ) = getNoticeQuery.getNoticeSimple(GetNoticesCommand(page = page, size = size))
+        ?.let { DataResponse(data = it) }
+        ?: throw NotFoundException("공지사항이 없습니다.")
 
     @Operation(summary = "공지사항 상세조회")
     @GetMapping("/{notice_id}")
-    fun notice(@PathVariable("notice_id") noticeId: Long) =
-        getNoticeQuery.getNoticeDetail(noticeId)
+    fun notice(@PathVariable("notice_id") noticeId: Long,
+    ) = getNoticeQuery.getNoticeDetail(noticeId)
+        ?.let { DataResponse(data = it) }
+        ?: throw NotFoundException("조회되는 공지사항이 없습니다.")
 
 }
