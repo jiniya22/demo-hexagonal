@@ -15,7 +15,7 @@ internal class GetNoticeService(
     private val loadNoticePort: LoadNoticePort,
 ) : GetNoticeQuery {
 
-    override fun getNoticeSimple(command: GetNoticesCommand) =
+    override fun getNoticeSimples(command: GetNoticesCommand) =
         loadNoticePort.loadNotices(PageRequest.of(command.page, command.size, Sort.by(Sort.Order.desc("id"))))
             ?.map { it.mapToNoticeSimple() }
 
