@@ -1,0 +1,2 @@
+insert into notice(id, title, content, created_at) values (3, 'demo-hexagonal', 'hexagonal architecture 구조로 만든 코프링 웹 애플리케이션을 만들었습니다', now());
+insert into notice(id, title, content, created_at) values (4, 'demo-app 서브 모듈 프로젝트', '이번 프로젝트는 서브 모듈로 구성되어있습니다.', now());

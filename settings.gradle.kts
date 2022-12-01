@@ -9,3 +9,5 @@ include("server:demo-app")
 findProject(":server:demo-app")?.name = "demo-app"
 include("util:common-util")
 findProject(":util:common-util")?.name = "common-util"
+include("server:demo-all-in-one-app")
+findProject(":server:demo-all-in-one-app")?.name = "demo-all-in-one-app"

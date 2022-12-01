@@ -1,0 +1,7 @@
+   _                       _ _     _
+ _| |___ _____ ___ ___ ___| | |___|_|___ ___ ___ ___ ___
+| . | -_|     | . |___| .'| | |___| |   |___| . |   | -_|
+|___|___|_|_|_|___|   |__,|_|_|   |_|_|_|   |___|_|_|___|
+
+${Ansi.GREEN}:: Spring Boot ::         ${Ansi.NORMAL}${spring-boot.formatted-version}${Ansi.NORMAL}
+${application.title}${application.formatted-version}
