@@ -1,0 +1,14 @@
+insert into notice(`title`, `content`, `created_at`) values ('notice1', 'content1', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice2', 'content2', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice3', 'content3', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice4', 'content4', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice5', 'content5', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice6', 'content6', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice7', 'content7', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice8', 'content8', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice9', 'content9', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice10', 'content10', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice11', 'content11', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice12', 'content12', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice13', 'content13', now());
+insert into notice(`title`, `content`, `created_at`) values ('notice14', 'content14', now());
