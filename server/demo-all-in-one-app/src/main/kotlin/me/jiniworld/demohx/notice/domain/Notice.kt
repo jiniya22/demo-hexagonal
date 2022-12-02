@@ -7,13 +7,12 @@ import java.time.LocalDateTime
 
 data class Notice(
     val id: Long,
-    val title: String,
-    val content: String,
+    val noticeContent: NoticeContent,
     val createdAt: LocalDateTime,
 ) {
     fun mapToNoticeSimple() =
-        NoticeSimple(id = id, title = title, createdOn = DateTimeUtils.toDateString(createdAt))
+        NoticeSimple(id = id, title = noticeContent.title, createdOn = DateTimeUtils.toDateString(createdAt))
 
     fun mapToNoticeDetail() =
-        NoticeDetail(id = id, title = title, content = content, createdAt = DateTimeUtils.toString(createdAt))
+        NoticeDetail(id = id, title = noticeContent.title, content = noticeContent.content, createdAt = DateTimeUtils.toString(createdAt))
 }
