@@ -31,7 +31,9 @@ Kotlin + Spring Boot 2 + Spring MVC + Spring Data JPA
 
 ***
 
-## 프로젝트 구성
+## 1. demo-app
+
+### 1.1. 프로젝트 구성
 
 프로젝트는 멀티 모듈로 구성되어있습니다.
 
@@ -53,7 +55,7 @@ Kotlin + Spring Boot 2 + Spring MVC + Spring Data JPA
 
 ***
 
-## demo-app
+### 1.2. demo-app
 
 demo 웹 애플리케이션의 실행 진입점은 `server - demo-app` 모듈의 DemoAppApplication 입니다.
 
@@ -63,3 +65,11 @@ demo 웹 애플리케이션의 실행 진입점은 `server - demo-app` 모듈의
 demo-app은 아래와 같이 `:util:common-util`, `:core:demo-core`, `:infrastructure:datastore-mariadb` 모듈을 포함합니다.
 
 <img width="724" alt="build.gradle.kts" src="https://user-images.githubusercontent.com/31076826/204640772-f1846649-a21d-459a-9883-3dae61b44536.png">
+
+***
+
+## 2. demo-all-in-one-app
+
+demo-app을 하나의 모듈로 만든 웹 애플리케이션
+
+adapter + core + domain 을 하나의 프로젝트 내에 구성했습니다.
