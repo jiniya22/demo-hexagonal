@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.notice.adapter.out.persistence
+package me.jiniworld.demohx.notice.adapter.output.persistence
 
 import me.jiniworld.demohx.notice.domain.Notice
 import me.jiniworld.demohx.notice.domain.NoticeContent

@@ -1,12 +1,12 @@
-package me.jiniworld.demohx.notice.adapter.`in`.web
+package me.jiniworld.demohx.notice.adapter.input.web
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
 import me.jiniworld.demohx.annotation.WebAdapter
 import me.jiniworld.demohx.model.DataResponse
 import me.jiniworld.demohx.model.NotFoundException
-import me.jiniworld.demohx.notice.application.port.`in`.GetNoticeQuery
-import me.jiniworld.demohx.notice.application.port.`in`.GetNoticesCommand
+import me.jiniworld.demohx.notice.application.port.input.GetNoticeQuery
+import me.jiniworld.demohx.notice.application.port.input.GetNoticesCommand
 import org.springframework.web.bind.annotation.*
 
 @WebAdapter

@@ -1,8 +1,8 @@
-package me.jiniworld.demohx.notice.adapter.out.persistence
+package me.jiniworld.demohx.notice.adapter.output.persistence
 
 import me.jiniworld.demohx.annotation.PersistenceAdapter
-import me.jiniworld.demohx.notice.application.port.out.LoadNoticePort
-import me.jiniworld.demohx.notice.application.port.out.SaveNoticePort
+import me.jiniworld.demohx.notice.application.port.output.LoadNoticePort
+import me.jiniworld.demohx.notice.application.port.output.SaveNoticePort
 import me.jiniworld.demohx.notice.domain.Notice
 import me.jiniworld.demohx.notice.domain.NoticeContent
 import org.springframework.data.domain.Pageable

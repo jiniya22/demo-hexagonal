@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.notice.application.port.`in`
+package me.jiniworld.demohx.notice.application.port.input
 
 data class RegisterNoticeCommand(
     val title: String,

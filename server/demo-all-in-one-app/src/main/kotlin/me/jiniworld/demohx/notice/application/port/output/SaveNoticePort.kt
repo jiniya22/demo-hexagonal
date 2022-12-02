@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.notice.application.port.out
+package me.jiniworld.demohx.notice.application.port.output
 
 import me.jiniworld.demohx.notice.domain.NoticeContent
 

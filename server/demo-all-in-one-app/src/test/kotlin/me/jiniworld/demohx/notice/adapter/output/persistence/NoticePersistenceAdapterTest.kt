@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.notice.adapter.out.persistence
+package me.jiniworld.demohx.notice.adapter.output.persistence
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

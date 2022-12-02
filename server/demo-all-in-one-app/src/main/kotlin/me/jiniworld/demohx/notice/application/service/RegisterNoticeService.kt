@@ -1,9 +1,9 @@
 package me.jiniworld.demohx.notice.application.service
 
 import me.jiniworld.demohx.annotation.UseCase
-import me.jiniworld.demohx.notice.application.port.`in`.RegisterNoticeCommand
-import me.jiniworld.demohx.notice.application.port.`in`.RegisterNoticeUseCase
-import me.jiniworld.demohx.notice.application.port.out.SaveNoticePort
+import me.jiniworld.demohx.notice.application.port.input.RegisterNoticeCommand
+import me.jiniworld.demohx.notice.application.port.input.RegisterNoticeUseCase
+import me.jiniworld.demohx.notice.application.port.output.SaveNoticePort
 import org.springframework.transaction.annotation.Transactional
 
 @Transactional
