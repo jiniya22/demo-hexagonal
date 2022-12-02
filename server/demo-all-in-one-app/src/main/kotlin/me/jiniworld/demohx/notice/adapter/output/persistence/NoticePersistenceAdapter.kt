@@ -21,6 +21,6 @@ internal class NoticePersistenceAdapter(
     }
 
     override fun saveNotice(noticeContent: NoticeContent) {
-        TODO("Not yet implemented")
+        noticeRepository.save(NoticeEntity(title = noticeContent.title, content = noticeContent.content))
     }
 }

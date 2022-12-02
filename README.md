@@ -35,7 +35,7 @@ Kotlin + Spring Boot 2 + Spring MVC + Spring Data JPA
 
 ### 1.1. 프로젝트 구성
 
-프로젝트는 멀티 모듈로 구성되어있습니다.
+demo-app 프로젝트는 멀티 모듈로 구성되어있습니다.
 
 <img width="344" alt="architecture-1" src="https://user-images.githubusercontent.com/31076826/204638756-a9a8b9b8-d0e5-4a27-bf14-4c8f12e93448.png">
 
@@ -73,3 +73,5 @@ demo-app은 아래와 같이 `:util:common-util`, `:core:demo-core`, `:infrastru
 demo-app을 하나의 모듈로 만든 웹 애플리케이션
 
 adapter + core + domain 을 하나의 프로젝트 내에 구성했습니다.
+
+<img width="382" alt="스크린샷 2022-12-02 오후 2 08 10" src="https://user-images.githubusercontent.com/31076826/205219195-fd9fef03-5a0d-4673-8020-8c7f353c7a05.png">

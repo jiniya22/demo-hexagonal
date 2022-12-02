@@ -27,6 +27,13 @@ internal class NoticeEntity {
     @LastModifiedDate
     var updatedAt: LocalDateTime? = null
 
+    constructor() {}
+
+    constructor(title: String, content: String) {
+        this.title = title
+        this.content = content
+    }
+
     fun mapToNotice() =
         Notice(id = id, noticeContent = NoticeContent(title = title, content = content), createdAt = createdAt)
 }
