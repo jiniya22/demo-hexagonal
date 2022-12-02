@@ -4,7 +4,7 @@ import me.jiniworld.demohx.annotation.PersistenceAdapter
 import me.jiniworld.demohx.notice.application.port.output.LoadNoticePort
 import me.jiniworld.demohx.notice.application.port.output.SaveNoticePort
 import me.jiniworld.demohx.notice.domain.Notice
-import me.jiniworld.demohx.notice.domain.NoticeContent
+import me.jiniworld.demohx.notice.domain.NoticeInfo
 import org.springframework.data.domain.Pageable
 import org.springframework.data.repository.findByIdOrNull
 
@@ -20,7 +20,7 @@ internal class NoticePersistenceAdapter(
         return noticeRepository.findByIdOrNull(id)?.mapToNotice()
     }
 
-    override fun saveNotice(noticeContent: NoticeContent): Notice =
-        noticeRepository.save(NoticeEntity(title = noticeContent.title, content = noticeContent.content))
+    override fun saveNotice(noticeInfo: NoticeInfo): Notice =
+        noticeRepository.save(NoticeEntity(title = noticeInfo.title, content = noticeInfo.content))
             .mapToNotice()
 }

@@ -1,6 +1,6 @@
 package me.jiniworld.demohx.notice.adapter.output.persistence
 
-import me.jiniworld.demohx.notice.domain.NoticeContent
+import me.jiniworld.demohx.notice.domain.NoticeInfo
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -39,11 +39,11 @@ internal class NoticePersistenceAdapterTest @Autowired constructor(
     @Transactional
     @Test
     fun saveNotice() {
-        val content = NoticeContent(title = "공지사항", content = "공지사항입니다")
+        val content = NoticeInfo(title = "공지사항", content = "공지사항입니다")
         val notice = noticePersistenceAdapter.saveNotice(content)
         Assertions.assertTrue(notice.id > 0)
-        Assertions.assertEquals(notice.noticeContent.title, content.title)
-        Assertions.assertEquals(notice.noticeContent.content, content.content)
+        Assertions.assertEquals(notice.noticeInfo.title, content.title)
+        Assertions.assertEquals(notice.noticeInfo.content, content.content)
         println(notice)
     }
 }

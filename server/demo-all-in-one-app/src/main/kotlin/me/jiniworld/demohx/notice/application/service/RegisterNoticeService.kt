@@ -4,7 +4,7 @@ import me.jiniworld.demohx.annotation.UseCase
 import me.jiniworld.demohx.notice.application.port.input.RegisterNoticeCommand
 import me.jiniworld.demohx.notice.application.port.input.RegisterNoticeUseCase
 import me.jiniworld.demohx.notice.application.port.output.SaveNoticePort
-import me.jiniworld.demohx.notice.domain.NoticeContent
+import me.jiniworld.demohx.notice.domain.NoticeInfo
 import org.springframework.transaction.annotation.Transactional
 
 @Transactional
@@ -14,6 +14,6 @@ class RegisterNoticeService(
 ) : RegisterNoticeUseCase {
 
     override fun registerNotice(command: RegisterNoticeCommand) {
-        saveNoticePort.saveNotice(NoticeContent(title = command.title, content = command.content))
+        saveNoticePort.saveNotice(NoticeInfo(title = command.title, content = command.content))
     }
 }
