@@ -20,7 +20,7 @@ internal class NoticePersistenceAdapter(
         return noticeRepository.findByIdOrNull(id)?.mapToNotice()
     }
 
-    override fun saveNotice(noticeContent: NoticeContent) {
+    override fun saveNotice(noticeContent: NoticeContent): Notice =
         noticeRepository.save(NoticeEntity(title = noticeContent.title, content = noticeContent.content))
-    }
+            .mapToNotice()
 }
