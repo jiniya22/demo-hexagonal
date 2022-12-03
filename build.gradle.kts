@@ -42,6 +42,7 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
         testImplementation("org.springframework.boot:spring-boot-starter-test")
+        implementation("com.ninja-squad:springmockk:3.1.1")
 
 //        implementation("com.google.code.gson:gson:2.9.0")
 //        implementation("org.jetbrains:annotations:23.0.0")

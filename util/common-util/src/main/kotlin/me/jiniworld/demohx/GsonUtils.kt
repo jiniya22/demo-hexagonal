@@ -5,18 +5,15 @@ import com.google.gson.GsonBuilder
 import com.google.gson.TypeAdapter
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonWriter
-import mu.KotlinLogging
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 object GsonUtils {
-    private val logger = KotlinLogging.logger {}
-
-    private val patternDate = "yyyy-MM-dd"
-    private val patternTime = "HH:mm:ss"
-    private val patternDateTime = "yyyy-MM-dd HH:mm:ss"
+    private const val patternDate = "yyyy-MM-dd"
+    private const val patternTime = "HH:mm:ss"
+    private const val patternDateTime = "yyyy-MM-dd HH:mm:ss"
 
     private val gson = GsonBuilder()
         .disableHtmlEscaping()
@@ -34,20 +31,6 @@ object GsonUtils {
     fun <T> fromJson(str: String, clazz: Class<T>): T {
         return gson.fromJson(str, clazz)
     }
-
-//    fun toJson(obj: Any): String? {
-//        val result = gson.toJson(obj)
-//        return if("null" == result) null else result
-//    }
-//
-//    fun <T> fromJson(str: String, clazz: Class<T>): T? {
-//        try {
-//            return gson.fromJson(str, clazz)
-//        } catch (e: JsonSyntaxException) {
-//            logger.error{ e.message }
-//        }
-//        return null
-//    }
     
     class LocalDateAdapter : TypeAdapter<LocalDate>() {
         private val format: DateTimeFormatter = DateTimeFormatter.ofPattern(patternDate)
