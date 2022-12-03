@@ -19,7 +19,7 @@ internal class RegisterNoticeController(
     private val registerNoticeUseCase: RegisterNoticeUseCase,
 ) {
 
-    @Operation(summary = "공지사항 상세조회")
+    @Operation(summary = "공지사항 추가")
     @PostMapping("")
     fun registerNotice(@RequestBody command: RegisterNoticeCommand): BaseResponse {
         registerNoticeUseCase.registerNotice(command)
