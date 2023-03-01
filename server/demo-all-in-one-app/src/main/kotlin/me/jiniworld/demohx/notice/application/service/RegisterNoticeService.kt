@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional
 
 @Transactional
 @UseCase
-class RegisterNoticeService(
+internal class RegisterNoticeService(
     private val saveNoticePort: SaveNoticePort,
 ) : RegisterNoticeUseCase {
 
