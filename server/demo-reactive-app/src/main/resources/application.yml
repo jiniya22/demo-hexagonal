@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: demo-reactive-app
+  profiles:
+    active: local
+  config:
+    import:
+      - demo-reactive-app.yml
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/book
+
+server:
+  port: 8080
+  tomcat:
+    basedir: .
+    #    accesslog:
+    #      enabled: true
+    #      directory: logs
+    #      pattern: "%{yyyy-MM-dd HH:mm:ss}t %{X-Forwarded-For}i(%h) %l %u \"%r\" %s %b"
+    remoteip:
+      protocol-header: X-Forwarded-Proto
+      remote-ip-header: X-Forwarded-For
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /
+    disable-swagger-default-url: true
+    doc-expansion: none
+    syntax-highlight:
+      theme: nord
+  paths-to-match:
+    - /v1/**
+    - /temp/**
+    - /data4library/**
+
+logging:
+  #  file:
+  #    name: logs/demo-reactive.log
+  exception-conversion-word: '%wEx'
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(${LOG_LEVEL_PATTERN:%-5p}){green} %clr([%22thread]){magenta} %clr(%-40.40logger{39}){cyan} %clr(: %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}){faint}'
+  level:
+    me.jiniworld.demohx: DEBUG
+    org:
+      springframework:
+        data:
+          mongodb.core.ReactiveMongoTemplate: DEBUG

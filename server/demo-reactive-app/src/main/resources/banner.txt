@@ -1,0 +1,7 @@
+
+___  ____ _  _ ____    ____ ____ ____ ____ ___ _ _  _ ____    ____ ___  ___
+|  \ |___ |\/| |  | __ |__/ |___ |__| |     |  | |  | |___ __ |__| |__] |__]
+|__/ |___ |  | |__|    |  \ |___ |  | |___  |  |  \/  |___    |  | |    |
+
+${Ansi.GREEN}:: Spring Boot ::         ${Ansi.NORMAL}${spring-boot.formatted-version}${Ansi.NORMAL}
+${application.title}${application.formatted-version}
