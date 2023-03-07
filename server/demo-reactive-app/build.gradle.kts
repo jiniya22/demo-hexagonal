@@ -11,5 +11,7 @@ dependencies {
 
     implementation(project(":util:common-util"))
     implementation(project(":core:demo-reactive-core"))
-    implementation(project(":infrastructure:datastore-mongodb-reactive"))
+    implementation(project(":infrastructure:datastore-mariadb-reactive"))
+
+    implementation("io.netty:netty-resolver-dns-native-macos:4.1.86.Final:osx-aarch_64")
 }

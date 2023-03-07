@@ -7,12 +7,27 @@ spring:
     import:
       - demo-reactive-app.yml
 
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/book
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3306/book
+    username: test
+    password: test
+    pool:
+      max-size: 50
+      validation-query: SELECT 1
+      initial-size: 10
+      enabled: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/book
 
 server:
-  port: 8080
+  port: 8081
   tomcat:
     basedir: .
     #    accesslog:
