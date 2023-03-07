@@ -3,13 +3,12 @@ rootProject.name = "demo-hexagonal"
 
 include(
     "core:demo-core",
+    "core:demo-reactive-core",
     "infrastructure:datastore-mariadb",
     "infrastructure:datastore-mongodb-reactive",
+    "infrastructure:datastore-mariadb-reactive",
     "server:demo-app",
+    "server:demo-reactive-app",
     "util:common-util",
     "server:demo-all-in-one-app"
 )
-include("server:demo-reactive-app")
-findProject(":server:demo-reactive-app")?.name = "demo-reactive-app"
-include("core:demo-reactive-core")
-findProject(":core:demo-reactive-core")?.name = "demo-reactive-core"
