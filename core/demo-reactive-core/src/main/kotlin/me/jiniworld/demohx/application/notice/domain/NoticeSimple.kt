@@ -1,4 +1,4 @@
-package me.jiniworld.demohx.application.notice.port.output
+package me.jiniworld.demohx.application.notice.domain
 
 data class NoticeSimple(
     val id: String,

@@ -1,6 +1,9 @@
 package me.jiniworld.demohx.persistence.notice
 
+import me.jiniworld.demohx.DateTimeUtils
 import me.jiniworld.demohx.application.notice.domain.Notice
+import me.jiniworld.demohx.application.notice.domain.NoticeDetail
+import me.jiniworld.demohx.application.notice.domain.NoticeSimple
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDateTime
@@ -28,4 +31,11 @@ internal class NoticeEntity {
 
     fun mapToNotice() =
         Notice(id = id, title = title, content = content, createdAt = createdAt)
+
+    fun mapToNoticeSimple() =
+        NoticeSimple(id = id, title = title, createdOn = DateTimeUtils.toDateString(createdAt))
+
+    fun mapToNoticeDetail() =
+        NoticeDetail(id = id, title = title, content = content, createdAt = DateTimeUtils.toString(createdAt))
+    
 }

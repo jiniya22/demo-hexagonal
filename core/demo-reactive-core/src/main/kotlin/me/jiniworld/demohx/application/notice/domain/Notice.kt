@@ -1,8 +1,6 @@
 package me.jiniworld.demohx.application.notice.domain
 
 import me.jiniworld.demohx.DateTimeUtils
-import me.jiniworld.demohx.application.notice.port.output.NoticeDetail
-import me.jiniworld.demohx.application.notice.port.output.NoticeSimple
 import java.time.LocalDateTime
 
 data class Notice(
