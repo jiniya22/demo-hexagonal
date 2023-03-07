@@ -7,24 +7,24 @@ spring:
     import:
       - demo-reactive-app.yml
 
-  r2dbc:
-    url: r2dbc:mariadb://localhost:3306/book
-    username: test
-    password: test
-    pool:
-      max-size: 50
-      validation-query: SELECT 1
-      initial-size: 10
-      enabled: true
+#  r2dbc:
+#    url: r2dbc:mariadb://localhost:3306/demofx
+#    username: test
+#    password: test
+#    pool:
+#      max-size: 50
+#      validation-query: SELECT 1
+#      initial-size: 10
+#      enabled: true
 
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
 
-#  data:
-#    mongodb:
-#      uri: mongodb://localhost:27017/book
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/demofx
 
 server:
   port: 8081
