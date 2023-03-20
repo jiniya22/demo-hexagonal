@@ -19,12 +19,10 @@ internal class GetNoticeController(
 
     @Operation(summary = "공지사항 목록")
     @GetMapping("")
-    suspend fun getNotices(
+    fun getNotices(
         @RequestParam(value = "page", required = false, defaultValue = "0") page: Int,
         @RequestParam(value = "size", required = false, defaultValue = "10") size: Int,
     ) = getNoticeQuery.getNoticeSimples(GetNoticesCommand(page = page, size = size))
-        ?.let { DataResponse(data = it) }
-        ?: throw NotFoundException("공지사항이 없습니다.")
 
     @Operation(summary = "공지사항 상세조회")
     @GetMapping("/{notice_id}")

@@ -1,6 +1,5 @@
 package me.jiniworld.demohx.application.notice.service
 
-import kotlinx.coroutines.flow.toList
 import me.jiniworld.demohx.annotation.UseCase
 import me.jiniworld.demohx.application.notice.domain.NoticeDetail
 import me.jiniworld.demohx.application.notice.port.input.GetNoticeQuery
@@ -16,10 +15,9 @@ internal class GetNoticeService(
     private val loadNoticePort: LoadNoticePort,
 ) : GetNoticeQuery {
 
-    override suspend fun getNoticeSimples(command: GetNoticesCommand) =
+    override fun getNoticeSimples(command: GetNoticesCommand) =
         loadNoticePort.loadNotices(PageRequest.of(command.page, command.size, Sort.by(
             Sort.Order.desc("id"))))
-            .toList()
 
     override suspend fun getNoticeDetail(id: String): NoticeDetail? =
         loadNoticePort.loadNotice(id)
