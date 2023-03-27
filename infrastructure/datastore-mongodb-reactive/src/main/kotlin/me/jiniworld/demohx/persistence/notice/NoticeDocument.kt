@@ -24,9 +24,6 @@ internal class NoticeDocument {
     @LastModifiedDate
     var updatedAt: LocalDateTime? = null
 
-    fun mapToNotice() =
-        Notice(id = id, title = title, content = content, createdAt = createdAt)
-
     fun mapToNoticeSimple() =
         NoticeSimple(id = id, title = title, createdOn = DateTimeUtils.toDateString(createdAt))
 
