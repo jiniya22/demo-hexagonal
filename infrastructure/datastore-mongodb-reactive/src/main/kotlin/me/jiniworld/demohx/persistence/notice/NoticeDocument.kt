@@ -1,7 +1,6 @@
 package me.jiniworld.demohx.persistence.notice
 
 import me.jiniworld.demohx.DateTimeUtils
-import me.jiniworld.demohx.application.notice.domain.Notice
 import me.jiniworld.demohx.application.notice.domain.NoticeDetail
 import me.jiniworld.demohx.application.notice.domain.NoticeSimple
 import org.springframework.data.annotation.CreatedDate

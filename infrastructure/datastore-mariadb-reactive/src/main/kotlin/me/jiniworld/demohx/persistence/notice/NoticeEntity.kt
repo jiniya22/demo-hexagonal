@@ -1,7 +1,6 @@
 package me.jiniworld.demohx.persistence.notice
 
 import me.jiniworld.demohx.DateTimeUtils
-import me.jiniworld.demohx.application.notice.domain.Notice
 import me.jiniworld.demohx.application.notice.domain.NoticeDetail
 import me.jiniworld.demohx.application.notice.domain.NoticeSimple
 import org.springframework.data.annotation.CreatedDate
@@ -24,9 +23,6 @@ internal class NoticeDocument {
 
     @LastModifiedDate
     var updatedAt: LocalDateTime? = null
-
-    fun mapToNotice() =
-        Notice(id = id, title = title, content = content, createdAt = createdAt)
 
     fun mapToNoticeSimple() =
         NoticeSimple(id = id, title = title, createdOn = DateTimeUtils.toDateString(createdAt))
