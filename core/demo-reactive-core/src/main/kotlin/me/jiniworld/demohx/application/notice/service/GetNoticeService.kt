@@ -20,6 +20,6 @@ internal class GetNoticeService(
         loadNoticePort.loadNotices(PageRequest.of(command.page, command.size, Sort.by(
             Sort.Order.desc("id")))).map { it.summary }
 
-    override suspend fun getNotice(id: String): Notice.Detail? =
+    override suspend fun getNoticeDetail(id: String): Notice.Detail? =
         loadNoticePort.loadNotice(id)?.detail()
 }

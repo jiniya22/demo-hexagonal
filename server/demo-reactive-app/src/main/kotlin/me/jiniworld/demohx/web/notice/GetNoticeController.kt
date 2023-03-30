@@ -26,7 +26,7 @@ internal class GetNoticeController(
     @Operation(summary = "공지사항 상세조회")
     @GetMapping("/{notice_id}")
     suspend fun getNotice(@PathVariable("notice_id") noticeId: String,
-    ) = getNoticeQuery.getNotice(noticeId)
+    ) = getNoticeQuery.getNoticeDetail(noticeId)
         ?: throw NotFoundException("조회되는 공지사항이 없습니다.")
 
 }
