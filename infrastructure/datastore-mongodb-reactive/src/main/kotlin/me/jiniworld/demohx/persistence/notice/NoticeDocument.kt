@@ -7,13 +7,9 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
 @Document(value = "notice")
-internal class NoticeDocument {
+internal class NoticeDocument(var title: String, var content: String) {
     @Id
-    var id: String = ""
-
-    var title: String = ""
-
-    var content: String = ""
+    var id: String? = null
 
     @CreatedDate
     var createdAt: LocalDateTime = LocalDateTime.now()
