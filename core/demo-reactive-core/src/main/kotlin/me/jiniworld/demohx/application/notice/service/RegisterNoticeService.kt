@@ -13,6 +13,7 @@ internal class RegisterNoticeService(
     private val saveNoticePort: SaveNoticePort,
 ): RegisterNoticeUseCase {
 
+    @Transactional
     override suspend fun registerNotice(command: RegisterNoticeCommand) {
         saveNoticePort.saveNotice(Notice(Notice.Summary(title = command.title), content = command.content))
     }
