@@ -5,16 +5,16 @@ data class Notice(
     val content: String,
 ) {
     data class Summary(
-        val id: String,
+        val id: String? = null,
         val title: String,
-        val createdAt: String,
+        val createdAt: String? = null,
     )
 
     data class Detail(
-        val id: String,
+        val id: String? = null,
         val title: String,
         val content: String,
-        val createdAt: String,
+        val createdAt: String? = null,
     )
 
     fun detail(): Detail {

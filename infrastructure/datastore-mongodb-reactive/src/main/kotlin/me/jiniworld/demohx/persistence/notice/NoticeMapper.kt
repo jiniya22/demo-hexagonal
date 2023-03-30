@@ -9,4 +9,7 @@ internal object NoticeMapper {
         Notice(summary = Notice.Summary(id = doc.id, title = doc.title,
             createdAt = DateTimeUtils.toString(doc.createdAt)), content = doc.content)
 
+    fun mapToDocument(notice: Notice) =
+        NoticeDocument(title = notice.summary.title, content = notice.content)
+
 }
