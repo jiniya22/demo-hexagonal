@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController
 internal class GetItemController(
     private val getItemQuery: GetItemQuery,
 ) {
-    @Operation(summary = "삼품 목록")
+    @Operation(summary = "상품 목록")
     @GetMapping("")
     fun getItems(
         @RequestParam(value = "page", required = false, defaultValue = "0") page: Int,

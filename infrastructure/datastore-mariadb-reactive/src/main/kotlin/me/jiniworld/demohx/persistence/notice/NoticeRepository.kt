@@ -6,6 +6,6 @@ import org.springframework.data.repository.kotlin.CoroutineCrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-internal interface NoticeRepository: CoroutineCrudRepository<NoticeDocument, String> {
-    fun findAllBy(pageable: Pageable): Flow<NoticeDocument>
+internal interface NoticeRepository: CoroutineCrudRepository<NoticeEntity, String> {
+    fun findAllBy(pageable: Pageable): Flow<NoticeEntity>
 }
